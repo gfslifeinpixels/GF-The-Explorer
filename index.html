@@ -522,7 +522,7 @@
     <!-- ===== STICKY HEADER ===== -->
     <div class="sticky-header">
 
-        <!-- HEADER (with menu button on the right) -->
+        <!-- HEADER -->
         <div class="header">
             <div class="header-left">
                 <div class="header-text">
@@ -579,6 +579,7 @@
         <hr class="menu-divider" />
 
         <div class="menu-label">🚀 upcoming & live</div>
+        <!-- UPDATED: China 2026 link -->
         <a href="https://gfslifeinpixels.github.io/China-2026/" target="_blank">
             <i class="fas fa-great-wall"></i> China 2026 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
@@ -623,7 +624,7 @@
 
         <!-- SEOUL 2026 -->
         <a href="https://gfslifeinpixels.github.io/Seoul-2026/" target="_blank" class="dest-card">
-            <div class="dest-img" style="background-image: url('https://images.pexels.com/photos/5904785/pexels-photo-5904785.jpeg?auto=compress&cs=tinysrgb&w=600');">
+            <div class="dest-img" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/c_fill,w_480/v1751262716/ieyuoar2uapqcygjh8ch.jpg');">
                 <div class="dest-overlay">
                     <div class="dest-year">2026</div>
                     <div class="dest-label">🇰🇷 Seoul</div>
@@ -631,12 +632,12 @@
             </div>
             <div class="dest-body">
                 <div class="dest-title">🏯 Seoul 2026</div>
-                <div class="dest-sub"><i class="fas fa-city"></i> K-pop · palaces · night markets</div>
+                <div class="dest-sub"><i class="fas fa-tree"></i> Nami Island · palaces · night markets</div>
                 <span class="click-hint-badge"><i class="fas fa-hand-pointer"></i> click to view</span>
             </div>
         </a>
 
-        <!-- BEIJING 2026 -->
+        <!-- BEIJING 2026 - UPDATED LINK & GREAT WALL IMAGE -->
         <a href="https://gfslifeinpixels.github.io/China-2026/" target="_blank" class="dest-card">
             <div class="dest-img" style="background-image: url('https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?auto=compress&cs=tinysrgb&w=600');">
                 <div class="dest-overlay">
@@ -646,7 +647,7 @@
             </div>
             <div class="dest-body">
                 <div class="dest-title">🏮 Beijing 2026</div>
-                <div class="dest-sub"><i class="fas fa-temple"></i> Great Wall · Forbidden City · dumplings</div>
+                <div class="dest-sub"><i class="fas fa-great-wall"></i> Great Wall · Forbidden City · dumplings</div>
                 <span class="click-hint-badge"><i class="fas fa-hand-pointer"></i> click to view</span>
             </div>
         </a>
@@ -684,7 +685,6 @@
         document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
     }
 
-    // Close menu when Escape key is pressed
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             const menu = document.getElementById('sideMenu');
