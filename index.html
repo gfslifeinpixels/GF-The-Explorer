@@ -15,30 +15,30 @@
         }
 
         body {
-            background: #fce4ec;
-            background-image: radial-gradient(circle at 20% 30%, #ffd5e5 10%, transparent 20%),
-                              radial-gradient(circle at 80% 70%, #c5e8f7 10%, transparent 25%),
-                              linear-gradient(145deg, #ffe6f0, #fde2e4);
+            background: #1a1a2e;
+            background-image: radial-gradient(circle at 20% 30%, #2d2d5e 10%, transparent 20%),
+                              radial-gradient(circle at 80% 70%, #4a2d5e 10%, transparent 25%),
+                              linear-gradient(145deg, #1a1a2e, #2a1a3e);
             font-family: 'Montserrat', sans-serif;
             min-height: 100vh;
+            padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 30px 20px;
         }
 
         .home-card {
             max-width: 1200px;
             width: 100%;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
             border-radius: 70px 70px 50px 50px;
-            box-shadow: 0 30px 40px rgba(255, 80, 120, 0.4),
-                        0 0 0 10px #fff6e6,
-                        0 0 0 16px #ff8fab;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5),
+                        0 0 0 10px rgba(255, 200, 100, 0.15),
+                        0 0 0 16px rgba(200, 100, 255, 0.2);
             padding: 40px 40px 35px;
-            border: 5px solid #ffd966;
+            border: 2px solid rgba(255, 215, 0, 0.3);
             animation: float 6s ease-in-out infinite;
+            margin: 30px 20px;
         }
 
         @keyframes float {
@@ -47,106 +47,149 @@
             100% { transform: translateY(0px); }
         }
 
-        /* ===== HEADER ===== */
+        /* ===== STICKY HEADER ===== */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 5px 0 10px 0;
+            margin: -10px -10px 0 -10px;
+            border-radius: 60px 60px 30px 30px;
+            background: rgba(26, 26, 46, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 3px solid #ffd700;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
         .header {
-            background: linear-gradient(135deg, #ffb3c6, #ff99c8);
-            padding: 25px 35px;
-            border-radius: 70px 20px 70px 20px;
-            border: 5px solid white;
-            box-shadow: 0 12px 0 #d94f7a, 0 20px 20px -10px #b34164;
-            margin-bottom: 30px;
+            padding: 18px 30px 10px 30px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
+            gap: 15px;
         }
 
         .header-left {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 18px;
             flex-wrap: wrap;
         }
 
         .avatar-lg {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
-            border: 5px solid white;
+            border: 4px solid #ffd700;
             object-fit: cover;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
         }
         .avatar-lg:hover {
-            transform: rotate(-5deg) scale(1.05);
+            transform: scale(1.05) rotate(-3deg);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
         }
 
         .header-text h1 {
             font-size: 2.8rem;
             font-weight: 900;
             font-family: 'Fredoka One', cursive;
-            color: #1a2a6c;
-            text-shadow: 4px 4px 0 #ffec9e, 6px 6px 0 #ffffffb0;
+            color: #ffd700;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.2), 0 4px 8px rgba(0,0,0,0.3);
             line-height: 1.1;
         }
 
         .header-text .tagline {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #5a2a4a;
-            margin-top: 4px;
+            color: #e0d0ff;
+            margin-top: 2px;
         }
         .header-text .tagline i {
-            color: #d94f7a;
+            color: #ff6b9d;
             margin: 0 6px;
         }
 
-        /* PRICE CHIP - WITHOUT GLOBE AND 2026 */
+        /* PRICE CHIP - vibrant */
         .price-chip {
-            background: #ffc44f;
-            padding: 12px 28px;
+            background: linear-gradient(135deg, #ff6b9d, #ff3366);
+            padding: 10px 28px;
             border-radius: 60px;
             font-weight: 900;
-            font-size: 1.2rem;
-            color: #1a2a6c;
-            border: 4px solid white;
-            box-shadow: 0 6px 0 #d45d00;
+            font-size: 1.1rem;
+            color: white;
+            border: 3px solid #ffd700;
+            box-shadow: 0 6px 0 #cc0044, 0 0 30px rgba(255, 51, 102, 0.3);
             font-family: 'Montserrat', sans-serif;
             text-align: center;
         }
         .price-chip small {
             display: block;
-            font-size: 0.8rem;
-            color: #5f3a0a;
+            font-size: 0.75rem;
+            color: #ffd0d0;
+        }
+
+        /* ===== INCLUSIONS STRIP (also sticky) ===== */
+        .inclusion-strip {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 50px;
+            padding: 10px 20px;
+            margin: 8px 20px 5px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .inc-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 5px 18px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #e0d0ff;
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .inc-item i {
+            font-size: 1.2rem;
+            color: #ffd700;
         }
 
         /* ===== WELCOME SECTION ===== */
         .welcome {
-            background: #fff5e6;
+            background: rgba(255, 215, 0, 0.06);
             border-radius: 50px;
             padding: 20px 30px;
-            margin-bottom: 35px;
-            border: 4px solid #ffb3c6;
-            box-shadow: inset 0 -4px 0 #f7a0b5;
+            margin: 25px 0 35px 0;
+            border: 1px solid rgba(255, 215, 0, 0.15);
             text-align: center;
         }
         .welcome h2 {
             font-family: 'Fredoka One', cursive;
             font-size: 2.2rem;
-            color: #1a2a6c;
+            color: #ffd700;
+            text-shadow: 0 0 40px rgba(255, 215, 0, 0.1);
         }
         .welcome h2 i {
-            color: #d94f7a;
+            color: #ff6b9d;
         }
         .welcome p {
             font-size: 1.1rem;
-            color: #5a3a4a;
-            font-weight: 600;
+            color: #c0b0e0;
+            font-weight: 400;
             margin-top: 6px;
         }
         .welcome .emoji-line {
             font-size: 1.8rem;
-            letter-spacing: 6px;
+            letter-spacing: 8px;
+            margin-top: 4px;
         }
 
         /* ===== DESTINATION GRID ===== */
@@ -158,20 +201,22 @@
         }
 
         .dest-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.06);
             border-radius: 50px 20px 50px 20px;
             overflow: hidden;
-            border: 5px solid white;
-            box-shadow: 10px 14px 0 #d96b7c, 0 20px 20px -8px #803f4c;
-            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 215, 0, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
             cursor: pointer;
             text-decoration: none;
             color: inherit;
             display: block;
+            backdrop-filter: blur(4px);
         }
         .dest-card:hover {
-            transform: scale(1.03) rotate(-0.5deg);
-            box-shadow: 14px 18px 0 #b34a5e, 0 25px 25px -8px #5f2c3a;
+            transform: translateY(-10px) scale(1.02);
+            border-color: #ffd700;
+            box-shadow: 0 25px 40px rgba(255, 215, 0, 0.15), 0 0 40px rgba(255, 215, 0, 0.05);
         }
 
         .dest-img {
@@ -179,7 +224,7 @@
             height: 200px;
             background-size: cover;
             background-position: center;
-            border-bottom: 6px solid #ffd966;
+            border-bottom: 3px solid #ffd700;
             position: relative;
         }
 
@@ -189,7 +234,7 @@
             left: 0;
             right: 0;
             padding: 15px 20px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.6));
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
             color: white;
         }
         .dest-img .dest-overlay .dest-year {
@@ -197,6 +242,7 @@
             font-weight: 900;
             font-family: 'Fredoka One', cursive;
             text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            color: #ffd700;
         }
         .dest-img .dest-overlay .dest-label {
             font-size: 1.4rem;
@@ -206,41 +252,44 @@
 
         .dest-body {
             padding: 18px 22px 22px;
-            background: #fffcf0;
         }
         .dest-body .dest-title {
             font-size: 1.8rem;
             font-weight: 900;
             font-family: 'Fredoka One', cursive;
-            color: #1a2a6c;
+            color: #ffd700;
         }
         .dest-body .dest-sub {
             font-size: 0.95rem;
-            font-weight: 600;
-            color: #5a3a4a;
+            font-weight: 500;
+            color: #b0a0c8;
             margin-top: 4px;
         }
         .dest-body .dest-sub i {
-            color: #d94f7a;
+            color: #ff6b9d;
             margin: 0 4px;
         }
 
         .click-hint-badge {
             display: inline-block;
-            background: #ffe28f;
+            background: rgba(255, 215, 0, 0.12);
             padding: 4px 16px;
             border-radius: 40px;
             font-size: 0.8rem;
             font-weight: 700;
-            color: #6b2e1a;
-            border: 2px solid #bb651e;
+            color: #ffd700;
+            border: 1px solid rgba(255, 215, 0, 0.2);
             margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        .dest-card:hover .click-hint-badge {
+            background: rgba(255, 215, 0, 0.2);
+            border-color: #ffd700;
         }
 
         /* ===== FOOTER ===== */
         .footer-modern {
-            background: #d94f7a;
-            color: white;
+            background: rgba(255, 215, 0, 0.08);
             padding: 20px 30px;
             border-radius: 70px;
             display: flex;
@@ -248,9 +297,8 @@
             align-items: center;
             margin-top: 30px;
             flex-wrap: wrap;
-            border: 5px solid #ffd966;
-            box-shadow: 0 10px 0 #8f2d4e;
-            font-family: 'Montserrat', sans-serif;
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            backdrop-filter: blur(8px);
             gap: 15px;
         }
 
@@ -259,76 +307,84 @@
             align-items: center;
             gap: 12px;
             font-size: 1rem;
-            font-weight: 700;
+            font-weight: 600;
+            color: #c0b0e0;
         }
 
         .footer-contact .contact-avatar {
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            border: 4px solid white;
+            border: 3px solid #ffd700;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
             cursor: pointer;
         }
         .footer-contact .contact-avatar:hover {
             transform: scale(1.1) rotate(-3deg);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
         }
 
         .footer-contact .contact-name {
-            color: #fff5d6;
+            color: #ffd700;
             text-decoration: none;
             font-weight: 800;
             font-size: 1.1rem;
-            border-bottom: 3px solid #ffd966;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
             padding-bottom: 2px;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
         .footer-contact .contact-name:hover {
             color: #ffffff;
+            border-bottom-color: #ffd700;
         }
 
         .footer-handle {
-            background: #1a2a6c;
-            padding: 10px 30px;
+            background: linear-gradient(135deg, #ff6b9d, #ff3366);
+            padding: 10px 28px;
             border-radius: 60px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 800;
-            border: 3px solid #ffc857;
+            border: 2px solid #ffd700;
             font-family: 'Fredoka One', cursive;
             text-align: center;
             line-height: 1.4;
+            color: white;
+            box-shadow: 0 0 30px rgba(255, 51, 102, 0.2);
         }
 
         .footer-handle .hashtag {
             display: block;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            color: #ffd966;
+            color: #ffd0d0;
             letter-spacing: 2px;
         }
 
         .footnote {
             text-align: center;
             font-size: 0.6rem;
-            color: #8f6b6b;
+            color: #8070a0;
             margin-top: 12px;
-            font-weight: 600;
-            opacity: 0.8;
+            font-weight: 400;
+            opacity: 0.7;
             font-family: 'Montserrat', sans-serif;
         }
 
         @media (max-width:750px){
-            .header { padding: 18px 20px; flex-direction: column; align-items: flex-start; gap: 15px; }
+            .header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px 16px; }
             .header-text h1 { font-size: 2rem; }
-            .avatar-lg { width: 60px; height: 60px; }
+            .avatar-lg { width: 50px; height: 50px; }
+            .inclusion-strip { padding: 8px 12px; gap: 10px; margin: 5px 10px; }
+            .inc-item { font-size: 0.8rem; padding: 4px 12px; }
             .welcome h2 { font-size: 1.6rem; }
             .destinations { grid-template-columns: 1fr; }
             .dest-img { height: 160px; }
             .footer-handle { font-size: 1rem; padding: 8px 16px; }
             .footer-contact .contact-name { font-size: 0.9rem; }
-            .home-card { padding: 20px; }
+            .home-card { padding: 20px 15px; margin: 15px 10px; }
+            .sticky-header { padding: 5px 5px 10px 5px; }
         }
     </style>
 </head>
@@ -336,20 +392,32 @@
 
 <div class="home-card">
 
-    <!-- ===== HEADER ===== -->
-    <div class="header">
-        <div class="header-left">
-            <img src="https://media.licdn.com/dms/image/v2/D4E03AQGltbte-MiZPA/profile-displayphoto-shrink_400_400/B4EZTe0aQkG0Ak-/0/1738905070025?e=1787788800&v=beta&t=rHTwhGRvzI_PDGDN1MFX1_I57WocqtVzl_3dXds2Rls" alt="Grace" class="avatar-lg">
-            <div class="header-text">
-                <h1>✨ GF Travel Itineraries</h1>
-                <div class="tagline">
-                    <i class="fas fa-map-pin"></i> by Grace <i class="fas fa-heart"></i> @theGFsadvise
+    <!-- ===== STICKY HEADER ===== -->
+    <div class="sticky-header">
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-left">
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQGltbte-MiZPA/profile-displayphoto-shrink_400_400/B4EZTe0aQkG0Ak-/0/1738905070025?e=1787788800&v=beta&t=rHTwhGRvzI_PDGDN1MFX1_I57WocqtVzl_3dXds2Rls" alt="Grace" class="avatar-lg">
+                <div class="header-text">
+                    <h1>✨ GF Travel Itineraries</h1>
+                    <div class="tagline">
+                        <i class="fas fa-map-pin"></i> by Grace <i class="fas fa-heart"></i> @theGFsadvise
+                    </div>
                 </div>
             </div>
+            <div class="price-chip">
+                <small>✈️ plan your next adventure</small>
+            </div>
         </div>
-        <div class="price-chip">
-            <small>✈️ plan your next adventure</small>
+
+        <!-- INCLUSIONS STRIP -->
+        <div class="inclusion-strip">
+            <span class="inc-item"><i class="fas fa-hotel"></i> Handpicked stays</span>
+            <span class="inc-item"><i class="fas fa-route"></i> Curated routes</span>
+            <span class="inc-item"><i class="fas fa-star"></i> Insider tips</span>
         </div>
+
     </div>
 
     <!-- ===== WELCOME ===== -->
@@ -363,7 +431,7 @@
 
     <div class="destinations">
 
-        <!-- TOKYO 2026 - Link to Japan-2026 -->
+        <!-- TOKYO 2026 -->
         <a href="https://gfslifeinpixels.github.io/Japan-2026/" target="_blank" class="dest-card">
             <div class="dest-img" style="background-image: url('https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=600');">
                 <div class="dest-overlay">
@@ -378,7 +446,7 @@
             </div>
         </a>
 
-        <!-- SEOUL 2026 - Link to Seoul-2026 -->
+        <!-- SEOUL 2026 -->
         <a href="https://gfslifeinpixels.github.io/Seoul-2026/" target="_blank" class="dest-card">
             <div class="dest-img" style="background-image: url('https://images.pexels.com/photos/5904785/pexels-photo-5904785.jpeg?auto=compress&cs=tinysrgb&w=600');">
                 <div class="dest-overlay">
@@ -393,7 +461,7 @@
             </div>
         </a>
 
-        <!-- BEIJING 2026 - Link to Seoul-2026 (placeholder) -->
+        <!-- BEIJING 2026 -->
         <a href="https://gfslifeinpixels.github.io/Seoul-2026/" target="_blank" class="dest-card">
             <div class="dest-img" style="background-image: url('https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?auto=compress&cs=tinysrgb&w=600');">
                 <div class="dest-overlay">
