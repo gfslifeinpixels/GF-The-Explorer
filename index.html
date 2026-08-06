@@ -904,11 +904,12 @@
             <a onclick="openModal('modal-hk-macau')">
                 <i class="fas fa-umbrella-beach"></i> Hong Kong · Macau 2025 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
             </a>
-            <!-- IndoChina 2025 - now opens modal -->
+            <!-- IndoChina 2025 -->
             <a onclick="openModal('modal-indochina')">
                 <i class="fas fa-temple"></i> IndoChina 2025 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
             </a>
-            <a href="https://docs.google.com/spreadsheets/d/1QWwNVhVu6tOICoJKzMBjece4yV3nbTLLdWPxPJaERSw/edit?gid=1412007665#gid=1412007665" target="_blank">
+            <!-- Japan 2025 - now opens modal -->
+            <a onclick="openModal('modal-japan2025')">
                 <i class="fas fa-cherry-blossom"></i> Japan 2025 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
             </a>
 
@@ -1147,6 +1148,103 @@
                     <div class="day-title"><i class="fas fa-plane-departure"></i> Friday, September 19, 2025 · DEPARTURE</div>
                     <div class="time-activity-row"><span class="time-badge">1:10 AM</span><span class="activity-text"><i class="fas fa-plane-departure"></i> Departure from Vietnam (Flight No. 5J 752)</span></div>
                     <div class="time-activity-row"><span class="time-badge">5:15 AM</span><span class="activity-text"><i class="fas fa-plane-arrival"></i> Arrival to Manila (NAIA T3)</span></div>
+                    <div class="alert-note"><i class="fas fa-home"></i> Welcome back! 🇵🇭</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- MODAL: JAPAN 2025 -->
+    <!-- ============================================================ -->
+    <div class="modal-overlay" id="modal-japan2025" onclick="closeModalOutside(event, 'modal-japan2025')">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">🇯🇵 Japan 2025</span>
+                <button class="modal-close" onclick="closeModal('modal-japan2025')"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+
+                <!-- DAY 1 - Thursday, Jul 3 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-plane"></i> Thursday, July 3, 2025</div>
+                    <div class="time-activity-row"><span class="time-badge">12:30 PM</span><span class="activity-text"><i class="fas fa-plane-departure"></i> Departure from Manila (Flight No. 5J 5056)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">6:10 PM</span><span class="activity-text"><i class="fas fa-plane-arrival"></i> Arrival to Tokyo (Narita Terminal 2)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">7:00 PM</span><span class="activity-text"><i class="fas fa-train"></i> Commute to Hotel</span></div>
+                    <div class="time-activity-row"><span class="time-badge">9:00 PM</span><span class="activity-text"><i class="fas fa-hotel"></i> Hotel Check In (APA Hotel Asakusa-Ekimae)</span></div>
+                </div>
+
+                <!-- DAY 2 - Friday, Jul 4 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-temple"></i> Friday, July 4, 2025 · ASAKUSA HISTORY EXPLORATION</div>
+                    <div class="time-activity-row"><span class="time-badge">6:00 AM</span><span class="activity-text"><i class="fas fa-utensils"></i> Breakfast</span></div>
+                    <div class="time-activity-row"><span class="time-badge">9:15 AM</span><span class="activity-text"><i class="fas fa-vest"></i> Meet up at Kimono Rental Place</span></div>
+                    <div class="time-activity-row"><span class="time-badge">9:30 AM</span><span class="activity-text"><i class="fas fa-walking"></i> Asakusa History Exploration</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-tree"></i> Sumida Park</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-info-circle"></i> Asakusa Culture Tourist Information Center</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-gate"></i> Kaminarimon</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-store"></i> Nakamise-dori Street</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-gate"></i> Hozomon</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-temple"></i> Sensoji Temple</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-shrine"></i> Asakusa Shrine</span></div>
+                    <div class="time-activity-row"><span class="time-badge">6:00 PM</span><span class="activity-text"><i class="fas fa-glass-cheers"></i> Izakaya @ Hoppy Street</span></div>
+                    <div class="time-activity-row"><span class="time-badge">8:00 PM</span><span class="activity-text"><i class="fas fa-hotel"></i> Back to Hotel</span></div>
+                </div>
+
+                <!-- DAY 3 - Saturday, Jul 5 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-city"></i> Saturday, July 5, 2025 · SHIBUYA & HARAJUKU</div>
+                    <div class="time-activity-row"><span class="time-badge">5:30 AM</span><span class="activity-text"><i class="fas fa-utensils"></i> Breakfast</span></div>
+                    <div class="time-activity-row"><span class="time-badge">7:00 AM</span><span class="activity-text"><i class="fas fa-train"></i> Commute to Shibuya</span></div>
+                    <div class="time-activity-row"><span class="time-badge">9:00 AM</span><span class="activity-text"><i class="fas fa-walking"></i> Shibuya Sightseeing</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-crosshairs"></i> Shibuya Scramble Crossing / Shibuya Sky</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-dog"></i> Hachiko Statue</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-store"></i> Shibuya Parco 6th floor - Anime Merch</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-utensils"></i> Lunch - Mawari Sushi</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-walking"></i> Harajuku: Takeshita Street → Togo Shrine</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-temple"></i> Meiji Jingu</span></div>
+                </div>
+
+                <!-- DAY 4 - Sunday, Jul 6 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-fuji"></i> Sunday, July 6, 2025 · MT. FUJI TOUR</div>
+                    <div class="time-activity-row"><span class="time-badge">5:30 AM</span><span class="activity-text"><i class="fas fa-utensils"></i> Breakfast</span></div>
+                    <div class="time-activity-row"><span class="time-badge">7:30 AM</span><span class="activity-text"><i class="fas fa-map-pin"></i> Meet up at JR Ueno St Park Gate</span></div>
+                    <div class="time-activity-row"><span class="time-badge">8:00 AM</span><span class="activity-text"><i class="fas fa-bus"></i> Mt. Fuji Tour</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-palace"></i> Sky Palace</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-shrine"></i> Fujiyoshida Sengen Shrine</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-water"></i> Lake Kawaguchi</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-utensils"></i> Lunch - Koshu Red Wine Meal</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-water"></i> Oshino Hakkai</span></div>
+                    <div class="time-activity-row"><span class="time-badge">6:00 PM</span><span class="activity-text"><i class="fas fa-utensils"></i> Dinner - Tokori Wagyu</span></div>
+                    <div class="time-activity-row"><span class="time-badge">8:00 PM</span><span class="activity-text"><i class="fas fa-hotel"></i> Back to Hotel</span></div>
+                </div>
+
+                <!-- DAY 5 - Monday, Jul 7 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-magic"></i> Monday, July 7, 2025 · HARRY POTTER STUDIO TOUR</div>
+                    <div class="time-activity-row"><span class="time-badge">5:30 AM</span><span class="activity-text"><i class="fas fa-utensils"></i> Breakfast</span></div>
+                    <div class="time-activity-row"><span class="time-badge">7:00 AM</span><span class="activity-text"><i class="fas fa-train"></i> Commute to Warner Bros</span></div>
+                    <div class="time-activity-row"><span class="time-badge">8:00 AM</span><span class="activity-text"><i class="fas fa-wand-magic-sparkles"></i> The Making of Harry Potter Studio Tour</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-train"></i> Platform 9 3/4</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-store"></i> Diagon Alley</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-church"></i> The Great Hall</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-building"></i> Ministry of Magic</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-tree"></i> Forbidden Forest</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-shopping-bag"></i> Souvenir Shop</span></div>
+                    <div class="time-activity-row"><span class="time-badge">6:00 PM</span><span class="activity-text"><i class="fas fa-utensils"></i> Dinner</span></div>
+                    <div class="time-activity-row"><span class="time-badge">9:00 PM</span><span class="activity-text"><i class="fas fa-hotel"></i> Back to Hotel</span></div>
+                </div>
+
+                <!-- DAY 6 - Tuesday, Jul 8 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-plane-departure"></i> Tuesday, July 8, 2025 · DEPARTURE</div>
+                    <div class="time-activity-row"><span class="time-badge">6:00 AM</span><span class="activity-text"><i class="fas fa-utensils"></i> Breakfast</span></div>
+                    <div class="time-activity-row"><span class="time-badge">7:00 AM</span><span class="activity-text"><i class="fas fa-hotel"></i> Hotel Check Out</span></div>
+                    <div class="time-activity-row"><span class="time-badge">7:45 AM</span><span class="activity-text"><i class="fas fa-train"></i> Commute to Airport</span></div>
+                    <div class="time-activity-row"><span class="time-badge">12:50 PM</span><span class="activity-text"><i class="fas fa-plane-departure"></i> Departure from Tokyo (Flight No. 5J 5056)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">5:15 PM</span><span class="activity-text"><i class="fas fa-plane-arrival"></i> Arrival in Manila</span></div>
                     <div class="alert-note"><i class="fas fa-home"></i> Welcome back! 🇵🇭</div>
                 </div>
 
