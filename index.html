@@ -257,7 +257,7 @@
             pointer-events: all;
         }
 
-        /* ===== PRICE CHIP ===== */
+        /* ===== PRICE CHIP - NOW A CLICKABLE LINK ===== */
         .price-chip {
             background: linear-gradient(135deg, #ff6b9d, #ff3366);
             padding: 4px 12px;
@@ -270,6 +270,14 @@
             font-family: 'Montserrat', sans-serif;
             text-align: center;
             min-width: 70px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .price-chip:hover {
+            transform: scale(1.05);
+            box-shadow: 0 3px 0 #cc0044, 0 0 30px rgba(255, 51, 102, 0.3);
         }
         .price-chip small {
             display: block;
@@ -721,6 +729,59 @@
             font-size: 0.7rem;
         }
 
+        /* ===== ABOUT ME MODAL SPECIAL STYLING ===== */
+        .about-content {
+            padding: 10px 6px;
+        }
+        .about-content .about-greeting {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #ffd700;
+            font-family: 'Fredoka One', cursive;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .about-content .about-greeting i {
+            color: #ff6b9d;
+        }
+        .about-content p {
+            font-size: 0.9rem;
+            color: #c0b0e0;
+            line-height: 1.7;
+            margin-bottom: 14px;
+            padding: 0 4px;
+        }
+        .about-content p i {
+            color: #ffd700;
+            margin: 0 4px;
+        }
+        .about-content .about-highlight {
+            background: rgba(255, 215, 0, 0.06);
+            border-left: 3px solid #ffd700;
+            padding: 10px 14px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-style: italic;
+            color: #e0d0ff;
+        }
+        .about-content .about-highlight i {
+            color: #ff6b9d;
+        }
+        .about-content .about-emoji-line {
+            text-align: center;
+            font-size: 1.8rem;
+            letter-spacing: 6px;
+            margin: 8px 0 4px 0;
+        }
+        .about-content .about-signoff {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffd700;
+            font-family: 'Fredoka One', cursive;
+            margin-top: 12px;
+        }
+
         @media (max-width: 480px) {
             .home-card {
                 padding: 12px 10px 14px;
@@ -812,6 +873,12 @@
             .modal-body .day-block .day-title {
                 font-size: 0.85rem;
             }
+            .about-content .about-greeting {
+                font-size: 1.3rem;
+            }
+            .about-content p {
+                font-size: 0.8rem;
+            }
         }
 
         @media (max-width: 380px) {
@@ -867,9 +934,10 @@
                     </div>
                 </div>
                 <div style="display: flex; align-items: center; gap: 8px;">
-                    <div class="price-chip">
+                    <!-- LINK TO GOOGLE FORM -->
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScab4_T-CVVq55FGL6E1L9Y9TczrxaygxGDLg8HXHI-T9jhrw/viewform?usp=publish-editor" target="_blank" class="price-chip">
                         <small>✈️ plan your next adventure</small>
-                    </div>
+                    </a>
                     <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -893,7 +961,8 @@
             <button class="close-btn" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
 
             <div class="menu-label">✦ explore</div>
-            <a href="https://www.linkedin.com/in/thegfsadvise/" target="_blank">
+            <!-- About Me -->
+            <a onclick="openModal('modal-about')">
                 <i class="fas fa-user"></i> About Me <span class="arrow"><i class="fas fa-arrow-right"></i></span>
             </a>
 
@@ -908,7 +977,7 @@
             <a onclick="openModal('modal-indochina')">
                 <i class="fas fa-temple"></i> IndoChina 2025 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
             </a>
-            <!-- Japan 2025 - now opens modal -->
+            <!-- Japan 2025 -->
             <a onclick="openModal('modal-japan2025')">
                 <i class="fas fa-cherry-blossom"></i> Japan 2025 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
             </a>
@@ -1011,6 +1080,66 @@
         </div>
 
     </div> <!-- end home-card -->
+
+    <!-- ============================================================ -->
+    <!-- MODAL: ABOUT ME (with story) -->
+    <!-- ============================================================ -->
+    <div class="modal-overlay" id="modal-about" onclick="closeModalOutside(event, 'modal-about')">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">✨ About Me</span>
+                <button class="modal-close" onclick="closeModal('modal-about')"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body about-content">
+
+                <div class="about-greeting">
+                    <i class="fas fa-compass"></i> Hello, I'm Grace!
+                </div>
+
+                <p>
+                    <i class="fas fa-plane"></i> I'm a passionate traveler who believes that every journey tells a story. 
+                    From the bustling streets of Tokyo to the ancient temples of Angkor Wat, I've been crafting adventures 
+                    that turn dreams into memories.
+                </p>
+
+                <p>
+                    <i class="fas fa-heart" style="color: #ff6b9d;"></i> My love for travel started with a single backpack 
+                    and a curiosity for the unknown. Over the years, I've explored 15+ countries, each one teaching me 
+                    something new about the world — and about myself.
+                </p>
+
+                <div class="about-highlight">
+                    <i class="fas fa-quote-left"></i> Travel is not just about seeing new places. It's about 
+                    collecting moments, tasting local flavors, and connecting with people who make this world feel 
+                    like home.
+                </div>
+
+                <p>
+                    <i class="fas fa-map-pin"></i> Through <strong>GF Travel Itineraries</strong>, I share handcrafted 
+                    plans that take the stress out of planning. Whether you're a solo explorer, a couple on a honeymoon, 
+                    or a group of friends chasing adventure, I've got a route for you.
+                </p>
+
+                <p>
+                    <i class="fas fa-camera"></i> When I'm not planning trips, you'll find me capturing sunsets, 
+                    learning new languages, or convincing my friends that "<em>one more night market</em>" is always a good idea.
+                </p>
+
+                <div class="about-emoji-line">
+                    🌏 ✈️ 🗺️ 📸 🍜
+                </div>
+
+                <div class="about-signoff">
+                    <i class="fas fa-heart" style="color: #ff6b9d;"></i> Good Times, Far Places <i class="fas fa-heart" style="color: #ff6b9d;"></i>
+                </div>
+
+                <div style="text-align: center; margin-top: 12px; font-size: 0.8rem; color: #8070a0;">
+                    <i class="fas fa-hashtag"></i> #GeeExplores · @theGFsadvise
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- ============================================================ -->
     <!-- MODAL: HONG KONG - MACAU 2025 -->
