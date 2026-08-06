@@ -14,17 +14,18 @@
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             width: 100%;
-            font-family: 'Montserrat', sans-serif;
         }
 
         body {
             background: #1a1a2e;
             background-image: radial-gradient(circle at 20% 30%, #2d2d5e 10%, transparent 20%),
-                              radial-gradient(circle at 80% 70%, #4a2d5e 10%, transparent 25%),
-                              linear-gradient(145deg, #1a1a2e, #2a1a3e);
+                radial-gradient(circle at 80% 70%, #4a2d5e 10%, transparent 25%),
+                linear-gradient(145deg, #1a1a2e, #2a1a3e);
+            font-family: 'Montserrat', sans-serif;
             min-height: 100vh;
             padding: 0;
             display: flex;
@@ -39,8 +40,8 @@
             backdrop-filter: blur(12px);
             border-radius: 40px 40px 30px 30px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
-                        0 0 0 6px rgba(255, 200, 100, 0.12),
-                        0 0 0 10px rgba(200, 100, 255, 0.15);
+                0 0 0 6px rgba(255, 200, 100, 0.12),
+                0 0 0 10px rgba(200, 100, 255, 0.15);
             padding: 20px 16px 20px;
             border: 2px solid rgba(255, 215, 0, 0.25);
             animation: none;
@@ -58,9 +59,15 @@
         }
 
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
         }
 
         /* ===== STICKY HEADER ===== */
@@ -98,7 +105,7 @@
             font-weight: 900;
             font-family: 'Fredoka One', cursive;
             color: #ffd700;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.15), 0 2px 6px rgba(0,0,0,0.3);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.3);
             line-height: 1.1;
         }
 
@@ -204,6 +211,7 @@
             font-size: 0.9rem;
             transition: all 0.25s ease;
             border: 1px solid transparent;
+            cursor: pointer;
         }
 
         .side-menu a i {
@@ -392,20 +400,20 @@
             left: 0;
             right: 0;
             padding: 10px 14px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.75));
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
             color: white;
         }
         .dest-img .dest-overlay .dest-year {
             font-size: 1.8rem;
             font-weight: 900;
             font-family: 'Fredoka One', cursive;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
             color: #ffd700;
         }
         .dest-img .dest-overlay .dest-label {
             font-size: 1.1rem;
             font-weight: 700;
-            text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
         }
 
         .dest-body {
@@ -540,137 +548,88 @@
             padding: 0 4px;
         }
 
-        @media (max-width: 480px) {
-            .home-card { padding: 12px 10px 14px; margin: 10px 6px; border-radius: 28px; }
-            .header-text h1 { font-size: 1.3rem; }
-            .header-text .tagline { font-size: 0.65rem; }
-            .menu-btn { width: 34px; height: 34px; font-size: 1rem; }
-            .price-chip { font-size: 0.6rem; padding: 3px 10px; min-width: 60px; }
-            .price-chip small { font-size: 0.5rem; }
-            .welcome h2 { font-size: 1.2rem; }
-            .welcome p { font-size: 0.75rem; }
-            .dest-img { height: 120px; }
-            .dest-body .dest-title { font-size: 1.1rem; }
-            .inclusion-strip { gap: 4px; padding: 4px 8px; }
-            .inc-item { font-size: 0.55rem; padding: 2px 8px; }
-            .inc-item i { font-size: 0.7rem; }
-            .footer-handle { font-size: 0.7rem; padding: 4px 12px; }
-            .footer-contact .contact-name { font-size: 0.7rem; }
-            .footer-avatar { width: 30px; height: 30px; }
-            .side-menu { width: 260px; padding: 16px 12px; right: -280px; }
-            .side-menu a { font-size: 0.8rem; padding: 6px 10px; }
-            .side-menu a i { font-size: 0.9rem; width: 20px; }
-            .side-menu .close-btn { font-size: 1.3rem; }
-        }
-
-        @media (max-width: 380px) {
-            .header-text h1 { font-size: 1.1rem; }
-            .price-chip { font-size: 0.5rem; padding: 2px 8px; min-width: 50px; }
-            .price-chip small { font-size: 0.45rem; }
-            .dest-img { height: 100px; }
-            .dest-body .dest-title { font-size: 1rem; }
-            .welcome h2 { font-size: 1rem; }
-            .dest-body .dest-sub { font-size: 0.7rem; }
-        }
-
-        /* Smooth scrolling */
-        .home-card {
-            scroll-behavior: smooth;
-        }
-
-        /* Better touch support */
-        .dest-card,
-        .menu-btn,
-        .side-menu a,
-        .footer-avatar,
-        .footer-contact .contact-name {
-            touch-action: manipulation;
-        }
-
-        /* ============================================================ */
-        /* ===== ABOUT ME PAGE (Modal style) ===== */
-        /* ============================================================ */
-        .about-overlay {
+        /* ===== MODAL OVERLAY ===== */
+        .modal-overlay {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.75);
             backdrop-filter: blur(8px);
             z-index: 9999;
             justify-content: center;
             align-items: center;
-            padding: 20px 16px;
+            padding: 16px 12px;
             animation: fadeIn 0.3s ease;
-            overflow-y: auto;
         }
 
-        .about-overlay.active {
+        .modal-overlay.active {
             display: flex;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
-        .about-content {
-            max-width: 750px;
+        .modal-content {
+            max-width: 900px;
             width: 100%;
-            max-height: 92vh;
-            background: linear-gradient(145deg, rgba(30, 30, 60, 0.96), rgba(20, 20, 45, 0.96));
-            backdrop-filter: blur(16px);
-            border-radius: 40px 20px 40px 20px;
+            max-height: 90vh;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(12px);
+            border-radius: 30px 16px 30px 16px;
             border: 2px solid #ffd700;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 0 6px rgba(255, 215, 0, 0.08);
-            padding: 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             overflow-y: auto;
-            animation: slideUp 0.4s ease;
-            position: relative;
+            padding: 0;
+            animation: slideUp 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            -webkit-overflow-scrolling: touch;
         }
 
         @keyframes slideUp {
-            from { transform: translateY(40px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
-        .about-header {
+        .modal-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 16px 24px;
-            border-bottom: 2px solid rgba(255, 215, 0, 0.15);
+            padding: 14px 20px;
+            background: rgba(255, 215, 0, 0.08);
+            border-bottom: 2px solid rgba(255, 215, 0, 0.2);
             position: sticky;
             top: 0;
-            background: rgba(20, 20, 45, 0.9);
-            backdrop-filter: blur(8px);
-            z-index: 5;
-            border-radius: 40px 20px 0 0;
+            z-index: 10;
+            border-radius: 28px 14px 0 0;
         }
-
-        .about-header .about-title {
-            font-family: 'Fredoka One', cursive;
-            font-size: 1.4rem;
-            color: #ffd700;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .about-header .about-title i {
-            color: #ff6b9d;
-            font-size: 1.6rem;
-        }
-
-        .about-close {
-            background: rgba(255, 215, 0, 0.1);
-            border: 2px solid rgba(255, 215, 0, 0.2);
-            color: #ffd700;
+        .modal-header .modal-title {
             font-size: 1.2rem;
-            width: 40px;
-            height: 40px;
+            font-weight: 900;
+            color: #ffd700;
+            font-family: 'Fredoka One', cursive;
+        }
+        .modal-header .modal-close {
+            background: rgba(255, 215, 0, 0.15);
+            color: #ffd700;
+            border: 2px solid rgba(255, 215, 0, 0.25);
+            font-size: 1.2rem;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -678,378 +637,580 @@
             align-items: center;
             justify-content: center;
         }
-        .about-close:hover {
+        .modal-header .modal-close:hover {
             background: rgba(255, 215, 0, 0.25);
-            transform: rotate(90deg);
+            transform: scale(1.05);
         }
 
-        .about-body {
-            padding: 24px 28px 30px;
+        .modal-body {
+            padding: 16px 18px 20px;
         }
 
-        .about-avatar-large {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid #ffd700;
-            object-fit: cover;
-            margin: 0 auto 20px auto;
-            display: block;
-            box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
+        .modal-body .day-block {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            padding: 12px 14px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(255, 215, 0, 0.08);
         }
 
-        .about-body .story-title {
-            font-family: 'Fredoka One', cursive;
-            font-size: 1.8rem;
+        .modal-body .day-block .day-title {
+            font-size: 1rem;
+            font-weight: 900;
             color: #ffd700;
-            text-align: center;
-            margin-bottom: 6px;
+            font-family: 'Fredoka One', cursive;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .about-body .story-sub {
+        .modal-body .day-block .day-title i {
+            color: #ff6b9d;
+        }
+
+        .modal-body .time-activity-row {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            padding: 4px 0;
+            border-bottom: 1px dashed rgba(255, 215, 0, 0.06);
+        }
+        .modal-body .time-activity-row:last-child {
+            border-bottom: none;
+        }
+        .modal-body .time-badge {
+            flex: 0 0 70px;
+            font-weight: 800;
+            font-size: 0.7rem;
+            color: #e0d0ff;
+            background: rgba(255, 215, 0, 0.06);
+            padding: 2px 8px;
+            border-radius: 12px;
             text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.08);
+            font-family: 'Montserrat', sans-serif;
+        }
+        .modal-body .activity-text {
+            flex: 1;
+            font-size: 0.8rem;
+            font-weight: 500;
             color: #c0b0e0;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            font-weight: 400;
-            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            font-family: 'Montserrat', sans-serif;
         }
-
-        .about-body .story-sub i {
+        .modal-body .activity-text i {
+            font-size: 0.9rem;
             color: #ff6b9d;
+            min-width: 20px;
         }
 
-        .story-text {
-            color: #d0c8e8;
-            font-size: 0.95rem;
-            line-height: 1.8;
-            font-weight: 400;
-        }
-
-        .story-text p {
-            margin-bottom: 16px;
-        }
-
-        .story-text .highlight {
-            color: #ffd700;
-            font-weight: 700;
-        }
-
-        .story-text .highlight-pink {
-            color: #ff6b9d;
+        .modal-body .alert-note {
+            background: rgba(255, 215, 0, 0.06);
+            border-radius: 12px;
+            padding: 4px 12px;
+            margin-top: 6px;
+            border: 1px solid rgba(255, 215, 0, 0.08);
             font-weight: 600;
-        }
-
-        .story-divider {
-            border: none;
-            height: 2px;
-            background: linear-gradient(to right, transparent, rgba(255, 215, 0, 0.3), transparent);
-            margin: 20px 0;
-        }
-
-        .story-tagline {
-            text-align: center;
-            font-family: 'Fredoka One', cursive;
-            font-size: 1.2rem;
-            color: #ffd700;
-            margin-top: 10px;
-            letter-spacing: 1px;
-        }
-
-        .story-tagline i {
-            color: #ff6b9d;
+            display: inline-block;
+            color: #e0d0ff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
         }
 
         @media (max-width: 480px) {
-            .about-content { border-radius: 28px 14px 28px 14px; }
-            .about-header { padding: 12px 16px; }
-            .about-header .about-title { font-size: 1.1rem; }
-            .about-close { width: 34px; height: 34px; font-size: 1rem; }
-            .about-body { padding: 16px 16px 22px; }
-            .about-avatar-large { width: 90px; height: 90px; }
-            .about-body .story-title { font-size: 1.4rem; }
-            .story-text { font-size: 0.85rem; line-height: 1.7; }
-            .story-tagline { font-size: 1rem; }
-            .about-body .story-sub { font-size: 0.8rem; }
+            .home-card {
+                padding: 12px 10px 14px;
+                margin: 10px 6px;
+                border-radius: 28px;
+            }
+            .header-text h1 {
+                font-size: 1.3rem;
+            }
+            .header-text .tagline {
+                font-size: 0.65rem;
+            }
+            .menu-btn {
+                width: 34px;
+                height: 34px;
+                font-size: 1rem;
+            }
+            .price-chip {
+                font-size: 0.6rem;
+                padding: 3px 10px;
+                min-width: 60px;
+            }
+            .price-chip small {
+                font-size: 0.5rem;
+            }
+            .welcome h2 {
+                font-size: 1.2rem;
+            }
+            .welcome p {
+                font-size: 0.75rem;
+            }
+            .dest-img {
+                height: 120px;
+            }
+            .dest-body .dest-title {
+                font-size: 1.1rem;
+            }
+            .inclusion-strip {
+                gap: 4px;
+                padding: 4px 8px;
+            }
+            .inc-item {
+                font-size: 0.55rem;
+                padding: 2px 8px;
+            }
+            .inc-item i {
+                font-size: 0.7rem;
+            }
+            .footer-handle {
+                font-size: 0.7rem;
+                padding: 4px 12px;
+            }
+            .footer-contact .contact-name {
+                font-size: 0.7rem;
+            }
+            .footer-avatar {
+                width: 30px;
+                height: 30px;
+            }
+            .side-menu {
+                width: 260px;
+                padding: 16px 12px;
+                right: -280px;
+            }
+            .side-menu a {
+                font-size: 0.8rem;
+                padding: 6px 10px;
+            }
+            .side-menu a i {
+                font-size: 0.9rem;
+                width: 20px;
+            }
+            .side-menu .close-btn {
+                font-size: 1.3rem;
+            }
+            .modal-content {
+                border-radius: 20px 12px 20px 12px;
+            }
+            .modal-header .modal-title {
+                font-size: 1rem;
+            }
+            .modal-body .time-badge {
+                flex: 0 0 55px;
+                font-size: 0.6rem;
+            }
+            .modal-body .activity-text {
+                font-size: 0.7rem;
+            }
+            .modal-body .day-block .day-title {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .header-text h1 {
+                font-size: 1.1rem;
+            }
+            .price-chip {
+                font-size: 0.5rem;
+                padding: 2px 8px;
+                min-width: 50px;
+            }
+            .price-chip small {
+                font-size: 0.45rem;
+            }
+            .dest-img {
+                height: 100px;
+            }
+            .dest-body .dest-title {
+                font-size: 1rem;
+            }
+            .welcome h2 {
+                font-size: 1rem;
+            }
+            .dest-body .dest-sub {
+                font-size: 0.7rem;
+            }
+        }
+
+        .dest-card,
+        .menu-btn,
+        .side-menu a,
+        .footer-avatar,
+        .footer-contact .contact-name {
+            touch-action: manipulation;
         }
     </style>
 </head>
 <body>
 
-<div class="home-card">
+    <div class="home-card">
 
-    <!-- ===== STICKY HEADER ===== -->
-    <div class="sticky-header">
+        <!-- ===== STICKY HEADER ===== -->
+        <div class="sticky-header">
 
-        <!-- HEADER -->
-        <div class="header">
-            <div class="header-left">
-                <div class="header-text">
-                    <h1>✨ GF Travel Itineraries</h1>
-                    <div class="tagline">
-                        <i class="fas fa-map-pin"></i> by Grace <i class="fas fa-heart"></i> @theGFsadvise
+            <!-- HEADER -->
+            <div class="header">
+                <div class="header-left">
+                    <div class="header-text">
+                        <h1>✨ GF Travel Itineraries</h1>
+                        <div class="tagline">
+                            <i class="fas fa-map-pin"></i> by Grace <i class="fas fa-heart"></i> @theGFsadvise
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-                <div class="price-chip">
-                    <small>✈️ plan your next adventure</small>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <div class="price-chip">
+                        <small>✈️ plan your next adventure</small>
+                    </div>
+                    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
-                <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
-                    <i class="fas fa-bars"></i>
-                </button>
             </div>
+
+            <!-- INCLUSIONS STRIP -->
+            <div class="inclusion-strip">
+                <span class="inc-item"><i class="fas fa-hotel"></i> Handpicked stays</span>
+                <span class="inc-item"><i class="fas fa-route"></i> Curated routes</span>
+                <span class="inc-item"><i class="fas fa-star"></i> Insider tips</span>
+            </div>
+
         </div>
 
-        <!-- INCLUSIONS STRIP -->
-        <div class="inclusion-strip">
-            <span class="inc-item"><i class="fas fa-hotel"></i> Handpicked stays</span>
-            <span class="inc-item"><i class="fas fa-route"></i> Curated routes</span>
-            <span class="inc-item"><i class="fas fa-star"></i> Insider tips</span>
-        </div>
+        <!-- ===== OVERLAY ===== -->
+        <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
 
-    </div>
+        <!-- ===== SIDE MENU ===== -->
+        <div class="side-menu" id="sideMenu">
+            <button class="close-btn" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
 
-    <!-- ===== OVERLAY ===== -->
-    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
-
-    <!-- ===== SIDE MENU ===== -->
-    <div class="side-menu" id="sideMenu">
-        <button class="close-btn" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
-
-        <div class="menu-label">✦ explore</div>
-        <a href="#" onclick="openAbout(); toggleMenu(); return false;">
-            <i class="fas fa-user"></i> About Me <span class="arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-
-        <hr class="menu-divider" />
-
-        <div class="menu-label">🗺️ past adventures</div>
-        <a href="https://docs.google.com/spreadsheets/d/16ku5sYxhHXLZpD3pauDBaTSBqg7lAhp8YQXNVSeUM-M/edit?gid=629570421#gid=629570421" target="_blank">
-            <i class="fas fa-umbrella-beach"></i> Hong Kong · Macau 2025 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://docs.google.com/spreadsheets/d/1QWwNVhVu6tOICoJKzMBjece4yV3nbTLLdWPxPJaERSw/edit?gid=1412007665#gid=1412007665" target="_blank">
-            <i class="fas fa-temple"></i> Indochina 2025 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://docs.google.com/spreadsheets/d/1QWwNVhVu6tOICoJKzMBjece4yV3nbTLLdWPxPJaERSw/edit?gid=1412007665#gid=1412007665" target="_blank">
-            <i class="fas fa-cherry-blossom"></i> Japan 2025 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-
-        <hr class="menu-divider" />
-
-        <div class="menu-label">🚀 upcoming & live</div>
-        <a href="https://gfslifeinpixels.github.io/China-2026/" target="_blank">
-            <i class="fas fa-great-wall"></i> China 2026 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://gfslifeinpixels.github.io/Japan-2026/" target="_blank">
-            <i class="fas fa-fuji"></i> Japan 2026 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://gfslifeinpixels.github.io/Seoul-2026/" target="_blank">
-            <i class="fas fa-city"></i> South Korea 2026 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-
-        <hr class="menu-divider" />
-
-        <div style="margin-top: auto; padding: 10px 8px; font-size: 0.6rem; color: #8070a0; border-top: 1px solid rgba(255,215,0,0.06);">
-            <i class="fas fa-compass"></i> GF: Good Times, Far Places
-        </div>
-    </div>
-
-    <!-- ===== WELCOME ===== -->
-    <div class="welcome">
-        <h2><i class="fas fa-compass"></i> Good Times, Far Places</h2>
-        <p>Explore handcrafted travel itineraries designed for fun, culture, and unforgettable memories.</p>
-        <div class="emoji-line">🗺️ ✨ 🌏 🏯 🎌</div>
-    </div>
-
-    <!-- ===== DESTINATIONS ===== -->
-    <div class="destinations">
-
-        <!-- TOKYO 2026 -->
-        <a href="https://gfslifeinpixels.github.io/Japan-2026/" target="_blank" class="dest-card">
-            <div class="dest-img" style="background-image: url('https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=600');">
-                <div class="dest-overlay">
-                    <div class="dest-year">2026</div>
-                    <div class="dest-label">🇯🇵 Tokyo</div>
-                </div>
-            </div>
-            <div class="dest-body">
-                <div class="dest-title">🗼 Tokyo 2026</div>
-                <div class="dest-sub"><i class="fas fa-cherry-blossom"></i> Cherry blossoms · Shibuya · Disney</div>
-                <span class="click-hint-badge"><i class="fas fa-hand-pointer"></i> click to view</span>
-            </div>
-        </a>
-
-        <!-- SEOUL 2026 -->
-        <a href="https://gfslifeinpixels.github.io/Seoul-2026/" target="_blank" class="dest-card">
-            <div class="dest-img" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/c_fill,w_480/v1751262716/ieyuoar2uapqcygjh8ch.jpg');">
-                <div class="dest-overlay">
-                    <div class="dest-year">2026</div>
-                    <div class="dest-label">🇰🇷 Seoul</div>
-                </div>
-            </div>
-            <div class="dest-body">
-                <div class="dest-title">🏯 Seoul 2026</div>
-                <div class="dest-sub"><i class="fas fa-tree"></i> Nami Island · palaces · night markets</div>
-                <span class="click-hint-badge"><i class="fas fa-hand-pointer"></i> click to view</span>
-            </div>
-        </a>
-
-        <!-- BEIJING 2026 -->
-        <a href="https://gfslifeinpixels.github.io/China-2026/" target="_blank" class="dest-card">
-            <div class="dest-img" style="background-image: url('https://live.staticflickr.com/8438/7821247204_65d5e395f6_b.jpg');">
-                <div class="dest-overlay">
-                    <div class="dest-year">2026</div>
-                    <div class="dest-label">🇨🇳 Beijing</div>
-                </div>
-            </div>
-            <div class="dest-body">
-                <div class="dest-title">🏮 Beijing 2026</div>
-                <div class="dest-sub"><i class="fas fa-great-wall"></i> Great Wall · Forbidden City · dumplings</div>
-                <span class="click-hint-badge"><i class="fas fa-hand-pointer"></i> click to view</span>
-            </div>
-        </a>
-
-    </div>
-
-    <!-- ===== FOOTER ===== -->
-    <div class="footer-modern">
-        <div class="footer-contact">
-            <span style="font-size: 0.8rem;">📩 contact:</span>
+            <div class="menu-label">✦ explore</div>
             <a href="https://www.linkedin.com/in/thegfsadvise/" target="_blank">
-                <img src="https://media.licdn.com/dms/image/v2/D4E03AQGltbte-MiZPA/profile-displayphoto-shrink_400_400/B4EZTe0aQkG0Ak-/0/1738905070025?e=1787788800&v=beta&t=rHTwhGRvzI_PDGDN1MFX1_I57WocqtVzl_3dXds2Rls" alt="Grace" class="footer-avatar">
+                <i class="fas fa-user"></i> About Me <span class="arrow"><i class="fas fa-arrow-right"></i></span>
             </a>
-            <a href="https://www.linkedin.com/in/thegfsadvise/" target="_blank" class="contact-name">Grace (@theGFsadvise)</a>
+
+            <hr class="menu-divider" />
+
+            <div class="menu-label">🗺️ past adventures</div>
+            <!-- Hong Kong - Macau 2025 -->
+            <a onclick="openModal('modal-hk-macau')">
+                <i class="fas fa-umbrella-beach"></i> Hong Kong · Macau 2025 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+            <!-- IndoChina 2025 - now opens modal -->
+            <a onclick="openModal('modal-indochina')">
+                <i class="fas fa-temple"></i> IndoChina 2025 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1QWwNVhVu6tOICoJKzMBjece4yV3nbTLLdWPxPJaERSw/edit?gid=1412007665#gid=1412007665" target="_blank">
+                <i class="fas fa-cherry-blossom"></i> Japan 2025 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <hr class="menu-divider" />
+
+            <div class="menu-label">🚀 upcoming & live</div>
+            <a href="https://gfslifeinpixels.github.io/China-2026/" target="_blank">
+                <i class="fas fa-great-wall"></i> China 2026 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="https://gfslifeinpixels.github.io/Japan-2026/" target="_blank">
+                <i class="fas fa-fuji"></i> Japan 2026 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="https://gfslifeinpixels.github.io/Seoul-2026/" target="_blank">
+                <i class="fas fa-city"></i> South Korea 2026 <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <hr class="menu-divider" />
+
+            <div style="margin-top: auto; padding: 10px 8px; font-size: 0.6rem; color: #8070a0; border-top: 1px solid rgba(255, 215, 0, 0.06);">
+                <i class="fas fa-compass"></i> GF: Good Times, Far Places
+            </div>
         </div>
-        <div class="footer-handle">
-            ✨ GF: Good Times, Far Places ✨
-            <span class="hashtag">#GeeExplores</span>
+
+        <!-- ===== WELCOME ===== -->
+        <div class="welcome">
+            <h2><i class="fas fa-compass"></i> Good Times, Far Places</h2>
+            <p>Explore handcrafted travel itineraries designed for fun, culture, and unforgettable memories.</p>
+            <div class="emoji-line">🗺️ ✨ 🌏 🏯 🎌</div>
+        </div>
+
+        <!-- ===== DESTINATIONS ===== -->
+        <div class="destinations">
+
+            <!-- TOKYO 2026 -->
+            <a href="https://gfslifeinpixels.github.io/Japan-2026/" target="_blank" class="dest-card">
+                <div class="dest-img" style="background-image: url('https://images.pexels.com/photos/2614818/pexels-photo-2614818.jpeg?auto=compress&cs=tinysrgb&w=600');">
+                    <div class="dest-overlay">
+                        <div class="dest-year">2026</div>
+                        <div class="dest-label">🇯🇵 Tokyo</div>
+                    </div>
+                </div>
+                <div class="dest-body">
+                    <div class="dest-title">🗼 Tokyo 2026</div>
+                    <div class="dest-sub"><i class="fas fa-cherry-blossom"></i> Cherry blossoms · Shibuya · Disney</div>
+                    <span class="click-hint-badge"><i class="fas fa-hand-pointer"></i> click to view</span>
+                </div>
+            </a>
+
+            <!-- SEOUL 2026 -->
+            <a href="https://gfslifeinpixels.github.io/Seoul-2026/" target="_blank" class="dest-card">
+                <div class="dest-img" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_auto/c_fill,w_480/v1751262716/ieyuoar2uapqcygjh8ch.jpg');">
+                    <div class="dest-overlay">
+                        <div class="dest-year">2026</div>
+                        <div class="dest-label">🇰🇷 Seoul</div>
+                    </div>
+                </div>
+                <div class="dest-body">
+                    <div class="dest-title">🏯 Seoul 2026</div>
+                    <div class="dest-sub"><i class="fas fa-tree"></i> Nami Island · palaces · night markets</div>
+                    <span class="click-hint-badge"><i class="fas fa-hand-pointer"></i> click to view</span>
+                </div>
+            </a>
+
+            <!-- BEIJING 2026 -->
+            <a href="https://gfslifeinpixels.github.io/China-2026/" target="_blank" class="dest-card">
+                <div class="dest-img" style="background-image: url('https://live.staticflickr.com/8438/7821247204_65d5e395f6_b.jpg');">
+                    <div class="dest-overlay">
+                        <div class="dest-year">2026</div>
+                        <div class="dest-label">🇨🇳 Beijing</div>
+                    </div>
+                </div>
+                <div class="dest-body">
+                    <div class="dest-title">🏮 Beijing 2026</div>
+                    <div class="dest-sub"><i class="fas fa-great-wall"></i> Great Wall · Forbidden City · dumplings</div>
+                    <span class="click-hint-badge"><i class="fas fa-hand-pointer"></i> click to view</span>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-modern">
+            <div class="footer-contact">
+                <span style="font-size: 0.8rem;">📩 contact:</span>
+                <a href="https://www.linkedin.com/in/thegfsadvise/" target="_blank">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQGltbte-MiZPA/profile-displayphoto-shrink_400_400/B4EZTe0aQkG0Ak-/0/1738905070025?e=1787788800&v=beta&t=rHTwhGRvzI_PDGDN1MFX1_I57WocqtVzl_3dXds2Rls" alt="Grace" class="footer-avatar">
+                </a>
+                <a href="https://www.linkedin.com/in/thegfsadvise/" target="_blank" class="contact-name">Grace (@theGFsadvise)</a>
+            </div>
+            <div class="footer-handle">
+                ✨ GF: Good Times, Far Places ✨
+                <span class="hashtag">#GeeExplores</span>
+            </div>
+        </div>
+
+        <!-- ===== FOOTNOTE ===== -->
+        <div class="footnote">
+            <i class="fas fa-info-circle"></i> Click any destination card to view the full itinerary. All dates and rates are subject to change.
+        </div>
+
+    </div> <!-- end home-card -->
+
+    <!-- ============================================================ -->
+    <!-- MODAL: HONG KONG - MACAU 2025 -->
+    <!-- ============================================================ -->
+    <div class="modal-overlay" id="modal-hk-macau" onclick="closeModalOutside(event, 'modal-hk-macau')">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">🇭🇰 Hong Kong · Macau 2025</span>
+                <button class="modal-close" onclick="closeModal('modal-hk-macau')"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+
+                <!-- DAY 1 - Monday, Nov 3 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-plane"></i> Monday, November 3, 2025</div>
+                    <div class="time-activity-row"><span class="time-badge">3:30 PM</span><span class="activity-text"><i class="fas fa-plane-departure"></i> Departure from NAIA</span></div>
+                    <div class="time-activity-row"><span class="time-badge">6:10 PM</span><span class="activity-text"><i class="fas fa-plane-arrival"></i> Arrival in HKG</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-shuttle-van"></i> Airport Transfer</span></div>
+                    <div class="time-activity-row"><span class="time-badge">8:00 PM</span><span class="activity-text"><i class="fas fa-hotel"></i> Hongkong Hotel Check In</span></div>
+                </div>
+
+                <!-- DAY 2 - Tuesday, Nov 4 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-castle"></i> Tuesday, November 4, 2025 · DISNEYLAND (DIY)</div>
+                    <div class="time-activity-row"><span class="time-badge">9:00 AM</span><span class="activity-text"><i class="fas fa-train"></i> Commute to Disneyland</span></div>
+                    <div class="time-activity-row"><span class="time-badge">10:00 AM</span><span class="activity-text"><i class="fas fa-dragon"></i> Start of Disneyland Adventure</span></div>
+                    <div class="time-activity-row"><span class="time-badge">8:00 PM</span><span class="activity-text"><i class="fas fa-hotel"></i> Back to Hotel</span></div>
+                    <div class="alert-note"><i class="fas fa-star"></i> ✨ Enjoy the magic of Hong Kong Disneyland!</div>
+                </div>
+
+                <!-- DAY 3 - Wednesday, Nov 5 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-city"></i> Wednesday, November 5, 2025 · HONG KONG CITY TOUR</div>
+                    <div class="time-activity-row"><span class="time-badge">8:00 AM</span><span class="activity-text"><i class="fas fa-bus"></i> Hong Kong City Tour</span></div>
+                    <div class="time-activity-row"><span class="time-badge">12:00 PM</span><span class="activity-text"><i class="fas fa-utensils"></i> Lunch</span></div>
+                    <div class="time-activity-row"><span class="time-badge">4:00 PM</span><span class="activity-text"><i class="fas fa-flag-checkered"></i> End of Tour</span></div>
+                    <div class="time-activity-row"><span class="time-badge">6:00 PM</span><span class="activity-text"><i class="fas fa-utensils"></i> Dinner</span></div>
+                </div>
+
+                <!-- DAY 4 - Thursday, Nov 6 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-ship"></i> Thursday, November 6, 2025 · HKG - MFM</div>
+                    <div class="time-activity-row"><span class="time-badge">11:00 AM</span><span class="activity-text"><i class="fas fa-hotel"></i> Hotel Check Out</span></div>
+                    <div class="time-activity-row"><span class="time-badge">1:00 PM</span><span class="activity-text"><i class="fas fa-ship"></i> Ferry Ride to Macau</span></div>
+                    <div class="time-activity-row"><span class="time-badge">3:00 PM</span><span class="activity-text"><i class="fas fa-hotel"></i> Macau Hotel Check In</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-clock"></i> Free Time</span></div>
+                    <div class="time-activity-row"><span class="time-badge">6:00 PM</span><span class="activity-text"><i class="fas fa-utensils"></i> Dinner</span></div>
+                </div>
+
+                <!-- DAY 5 - Friday, Nov 7 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-temple"></i> Friday, November 7, 2025 · MACAU TOUR</div>
+                    <div class="time-activity-row"><span class="time-badge">8:00 AM</span><span class="activity-text"><i class="fas fa-bus"></i> Macau Day Tour</span></div>
+                    <div class="time-activity-row"><span class="time-badge">12:00 PM</span><span class="activity-text"><i class="fas fa-utensils"></i> Lunch</span></div>
+                    <div class="time-activity-row"><span class="time-badge">5:00 PM</span><span class="activity-text"><i class="fas fa-flag-checkered"></i> End of Tour</span></div>
+                    <div class="time-activity-row"><span class="time-badge">6:00 PM</span><span class="activity-text"><i class="fas fa-utensils"></i> Dinner</span></div>
+                    <div class="time-activity-row"><span class="time-badge">8:00 PM</span><span class="activity-text"><i class="fas fa-shuttle-van"></i> Airport Transfer</span></div>
+                    <div class="time-activity-row"><span class="time-badge">10:25 PM</span><span class="activity-text"><i class="fas fa-plane-departure"></i> Departure from MFM</span></div>
+                </div>
+
+                <!-- DAY 6 - Saturday, Nov 8 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-plane-arrival"></i> Saturday, November 8, 2025</div>
+                    <div class="time-activity-row"><span class="time-badge">12:45 AM</span><span class="activity-text"><i class="fas fa-plane-arrival"></i> Arrival in Manila</span></div>
+                    <div class="alert-note"><i class="fas fa-home"></i> Welcome back! 🇵🇭</div>
+                </div>
+
+            </div>
         </div>
     </div>
 
-    <!-- ===== FOOTNOTE ===== -->
-    <div class="footnote">
-        <i class="fas fa-info-circle"></i> Click any destination card to view the full itinerary. All dates and rates are subject to change.
+    <!-- ============================================================ -->
+    <!-- MODAL: INDOCHINA 2025 -->
+    <!-- ============================================================ -->
+    <div class="modal-overlay" id="modal-indochina" onclick="closeModalOutside(event, 'modal-indochina')">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-title">🌏 IndoChina 2025</span>
+                <button class="modal-close" onclick="closeModal('modal-indochina')"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+
+                <!-- DAY 1 - Sunday, Sep 14 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-plane"></i> Sunday, September 14, 2025</div>
+                    <div class="time-activity-row"><span class="time-badge">7:35 PM</span><span class="activity-text"><i class="fas fa-plane-departure"></i> Departure from Manila (Flight No. 5J 863)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">10:10 PM</span><span class="activity-text"><i class="fas fa-plane-arrival"></i> Arrival in Bangkok, Thailand (Don Mueang T1)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">11:00 PM</span><span class="activity-text"><i class="fas fa-hotel"></i> Hotel Check In - Picnic Hotel Bangkok</span></div>
+                </div>
+
+                <!-- DAY 2 - Monday, Sep 15 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-city"></i> Monday, September 15, 2025 · BANGKOK CITY TOUR</div>
+                    <div class="time-activity-row"><span class="time-badge">6:00 AM</span><span class="activity-text"><i class="fas fa-utensils"></i> Breakfast (included)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">7:00 AM</span><span class="activity-text"><i class="fas fa-bus"></i> BANGKOK CITY TOUR</span></div>
+                    <div class="time-activity-row"><span class="time-badge">4:00 PM</span><span class="activity-text"><i class="fas fa-hotel"></i> Back to Hotel</span></div>
+                    <div class="time-activity-row"><span class="time-badge">9:00 PM</span><span class="activity-text"><i class="fas fa-bed"></i> Lights Out</span></div>
+                </div>
+
+                <!-- DAY 3 - Tuesday, Sep 16 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-temple"></i> Tuesday, September 16, 2025 · BANGKOK → SIEM REAP</div>
+                    <div class="time-activity-row"><span class="time-badge">6:00 AM</span><span class="activity-text"><i class="fas fa-utensils"></i> Breakfast (included)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">7:00 AM</span><span class="activity-text"><i class="fas fa-hotel"></i> Bangkok Hotel Check Out</span></div>
+                    <div class="time-activity-row"><span class="time-badge">10:10 AM</span><span class="activity-text"><i class="fas fa-plane-departure"></i> Flight Departure to SAI (Cambodia)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">11:10 AM</span><span class="activity-text"><i class="fas fa-plane-arrival"></i> Arrival in Siem Reap</span></div>
+                    <div class="time-activity-row"><span class="time-badge">12:00 PM</span><span class="activity-text"><i class="fas fa-utensils"></i> Lunch</span></div>
+                    <div class="time-activity-row"><span class="time-badge">1:00 PM</span><span class="activity-text"><i class="fas fa-landmark"></i> ANGKOR WAT TOUR</span></div>
+                    <div class="time-activity-row"><span class="time-badge">5:00 PM</span><span class="activity-text"><i class="fas fa-hotel"></i> Hotel Check In - Pacific Hotel & Spa</span></div>
+                </div>
+
+                <!-- DAY 4 - Wednesday, Sep 17 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-water"></i> Wednesday, September 17, 2025 · SIEM REAP → HO CHI MINH</div>
+                    <div class="time-activity-row"><span class="time-badge">6:00 AM</span><span class="activity-text"><i class="fas fa-utensils"></i> Breakfast (included)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">8:00 AM</span><span class="activity-text"><i class="fas fa-hotel"></i> Siem Reap Hotel Check Out</span></div>
+                    <div class="time-activity-row"><span class="time-badge">12:10 PM</span><span class="activity-text"><i class="fas fa-plane-departure"></i> Flight Departure to SGN (Vietnam)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">2:00 PM</span><span class="activity-text"><i class="fas fa-plane-arrival"></i> Arrival in Ho Chi Minh City</span></div>
+                    <div class="time-activity-row"><span class="time-badge">3:00 PM</span><span class="activity-text"><i class="fas fa-hotel"></i> Hotel Check In - Saigon Kiko Hotel</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-clock"></i> FREE TIME - Night Market (Food Trip)</span></div>
+                </div>
+
+                <!-- DAY 5 - Thursday, Sep 18 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-river"></i> Thursday, September 18, 2025 · MEKONG DELTA TOUR</div>
+                    <div class="time-activity-row"><span class="time-badge">7:00 AM</span><span class="activity-text"><i class="fas fa-utensils"></i> Breakfast (included)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">8:00 AM</span><span class="activity-text"><i class="fas fa-boat"></i> MEKONG DELTA TOUR</span></div>
+                    <div class="time-activity-row"><span class="time-badge"></span><span class="activity-text"><i class="fas fa-utensils"></i> Lunch (included)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">9:30 PM</span><span class="activity-text"><i class="fas fa-hotel"></i> Hotel Check Out</span></div>
+                    <div class="time-activity-row"><span class="time-badge">10:10 PM</span><span class="activity-text"><i class="fas fa-plane-arrival"></i> Arrival in SGN Airport (check in)</span></div>
+                </div>
+
+                <!-- DAY 6 - Friday, Sep 19 -->
+                <div class="day-block">
+                    <div class="day-title"><i class="fas fa-plane-departure"></i> Friday, September 19, 2025 · DEPARTURE</div>
+                    <div class="time-activity-row"><span class="time-badge">1:10 AM</span><span class="activity-text"><i class="fas fa-plane-departure"></i> Departure from Vietnam (Flight No. 5J 752)</span></div>
+                    <div class="time-activity-row"><span class="time-badge">5:15 AM</span><span class="activity-text"><i class="fas fa-plane-arrival"></i> Arrival to Manila (NAIA T3)</span></div>
+                    <div class="alert-note"><i class="fas fa-home"></i> Welcome back! 🇵🇭</div>
+                </div>
+
+            </div>
+        </div>
     </div>
 
-</div> <!-- end home-card -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            const overlay = document.getElementById('menuOverlay');
+            menu.classList.toggle('open');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+        }
 
-<!-- ============================================================ -->
-<!-- ===== ABOUT ME OVERLAY ===== -->
-<!-- ============================================================ -->
-<div class="about-overlay" id="aboutOverlay" onclick="closeAboutOutside(event)">
-    <div class="about-content">
-        <div class="about-header">
-            <div class="about-title">
-                <i class="fas fa-user-astronaut"></i> About Me
-            </div>
-            <button class="about-close" onclick="closeAbout()"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="about-body">
-            <img src="https://media.licdn.com/dms/image/v2/D4E03AQGltbte-MiZPA/profile-displayphoto-shrink_400_400/B4EZTe0aQkG0Ak-/0/1738905070025?e=1787788800&v=beta&t=rHTwhGRvzI_PDGDN1MFX1_I57WocqtVzl_3dXds2Rls" alt="Grace" class="about-avatar-large">
-
-            <div class="story-title">✈️ Good Times, Far Places</div>
-            <div class="story-sub">✨ <i class="fas fa-heart"></i> Grace · @theGFsadvise <i class="fas fa-heart"></i> ✨</div>
-
-            <div class="story-text">
-                <p>
-                    <span class="highlight">I'm Grace</span> — a curious soul with a <span class="highlight-pink">passion for exploration</span> and a deep love for discovering the world's hidden gems. 
-                    My journey began with a simple belief: <span class="highlight">travel is more than just seeing new places; it's about collecting moments, flavors, and stories.</span>
-                </p>
-
-                <p>
-                    From the <span class="highlight-pink">cherry blossom-lined streets of Tokyo</span> to the <span class="highlight">bustling night markets of Seoul</span> 
-                    and the <span class="highlight-pink">ancient wonders of Beijing</span>, every destination has a story waiting to be told. 
-                    I don't just plan trips — I curate <span class="highlight">experiences</span> that stay with you long after the journey ends.
-                </p>
-
-                <hr class="story-divider" />
-
-                <p>
-                    <span class="highlight">🌏 Why GF Travel Itineraries?</span><br />
-                    The <span class="highlight">"GF"</span> stands for <span class="highlight-pink">"Good Times, Far Places"</span> — because that's exactly what I believe travel should be. 
-                    Whether you're a <span class="highlight">solo adventurer</span>, a <span class="highlight-pink">couple</span>, or a <span class="highlight">group of friends</span>, I'm here to help you turn your travel dreams into reality.
-                </p>
-
-                <p>
-                    <span class="highlight-pink">✨ What I offer:</span><br />
-                    🗺️ Handcrafted, <span class="highlight">day-by-day itineraries</span><br />
-                    🏨 <span class="highlight-pink">Curated hotel recommendations</span> for every budget<br />
-                    🍜 <span class="highlight">Local food guides</span> to satisfy every craving<br />
-                    📸 <span class="highlight-pink">Instagram-worthy spots</span> you won't want to miss<br />
-                    💡 <span class="highlight">Insider tips</span> that only locals know
-                </p>
-
-                <hr class="story-divider" />
-
-                <p>
-                    <span class="highlight">💫 Let's explore together.</span><br />
-                    Whether you're planning your <span class="highlight-pink">first big trip</span> or your <span class="highlight">fiftieth</span>, I'm here to make every journey 
-                    <span class="highlight-pink">effortless, memorable, and full of good times.</span>
-                </p>
-            </div>
-
-            <div class="story-tagline">
-                <i class="fas fa-compass"></i> Good Times, Far Places <i class="fas fa-compass"></i>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===== JAVASCRIPT ===== -->
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('sideMenu');
-        const overlay = document.getElementById('menuOverlay');
-        menu.classList.toggle('open');
-        overlay.classList.toggle('active');
-        document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
-    }
-
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+            // Close side menu if open
             const menu = document.getElementById('sideMenu');
             if (menu.classList.contains('open')) {
                 toggleMenu();
             }
-            const about = document.getElementById('aboutOverlay');
-            if (about.classList.contains('active')) {
-                closeAbout();
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeModalOutside(event, id) {
+            if (event.target === document.getElementById(id)) {
+                closeModal(id);
             }
         }
-    });
 
-    // Close menu on swipe right (touch)
-    let touchStartX = 0;
-    document.addEventListener('touchstart', function(e) {
-        touchStartX = e.changedTouches[0].screenX;
-    });
-    document.addEventListener('touchmove', function(e) {
-        const menu = document.getElementById('sideMenu');
-        if (!menu.classList.contains('open')) return;
-        const touchEndX = e.changedTouches[0].screenX;
-        if (touchStartX - touchEndX > 50) {
-            toggleMenu();
-        }
-    }, { passive: true });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const openModals = document.querySelectorAll('.modal-overlay.active');
+                openModals.forEach(function(modal) {
+                    closeModal(modal.id);
+                });
+                const menu = document.getElementById('sideMenu');
+                if (menu.classList.contains('open')) {
+                    toggleMenu();
+                }
+            }
+        });
 
-    // ===== ABOUT ME FUNCTIONS =====
-    function openAbout() {
-        document.getElementById('aboutOverlay').classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeAbout() {
-        document.getElementById('aboutOverlay').classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-
-    function closeAboutOutside(event) {
-        if (event.target === document.getElementById('aboutOverlay')) {
-            closeAbout();
-        }
-    }
-</script>
+        // Close menu on swipe right (touch)
+        let touchStartX = 0;
+        document.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        document.addEventListener('touchmove', function(e) {
+            const menu = document.getElementById('sideMenu');
+            if (!menu.classList.contains('open')) return;
+            const touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) {
+                toggleMenu();
+            }
+        }, { passive: true });
+    </script>
 
 </body>
 </html>
